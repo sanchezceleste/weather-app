@@ -12,3 +12,18 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Country {
+  id        String    @id @default(uuid())
+  createdAt DateTime  @default(now())
+  name      String    @unique
+  Weather   Weather[]
+}
+
+model Weather {
+  id          String  @id @default(uuid())
+  main        String
+  description String
+  belongsToId String
+  belongsTo   Country @relation(fields: [belongsToId], references: [id])
+}
