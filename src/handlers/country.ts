@@ -4,6 +4,7 @@ export const createCountry = async (req, res) => {
     const country = await prisma.country.create({
             data: {
                 name: req.body.name,
+                opinion: req.body.opinion
             },
         });
         res.json(country);
@@ -33,6 +34,7 @@ export const updateCountry = async (req, res) => {
         },
         data: {
             name: req.body.name,
+            opinion: req.body.opinion
         }
     })
     res.json({data: country})

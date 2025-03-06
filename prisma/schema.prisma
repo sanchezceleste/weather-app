@@ -16,13 +16,8 @@ datasource db {
 model Country {
   id        String    @id @default(uuid())
   name      String    @unique
-  weather   Weather[]
+  opinion String?
 }
 
-model Weather {
-  id          String  @id @default(uuid())
-  main        String
-  description String
-  belongsToId String
-  belongsTo   Country @relation(fields: [belongsToId], references: [id])
-}
+
+
