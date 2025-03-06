@@ -17,7 +17,7 @@ model Country {
   id        String    @id @default(uuid())
   createdAt DateTime  @default(now())
   name      String    @unique
-  Weather   Weather[]
+  weather   Weather[]
 }
 
 model Weather {
