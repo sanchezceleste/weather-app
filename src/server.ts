@@ -1,6 +1,8 @@
 import express from 'express'
 import router from './router'
 import morgan from 'morgan'
+
+const cors = require('cors');
 // app is the entire app
 
 // const express = require('express')
