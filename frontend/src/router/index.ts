@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import allCountries from '../views/allCountries.vue'
 import addCountry from '../views/addCountry.vue'
 import country from '../views/country.vue'

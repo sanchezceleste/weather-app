@@ -1,22 +1,24 @@
-<script setup lang="ts">
+<script lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'App', // optional
+  components: {
+    RouterLink,
+    RouterView
+  },
+})
 
 </script>
 
 <template>
   <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-
-    <!-- <div class="wrapper"> -->
-      <!-- <HelloWorld msg="You did it!" /> -->
-
       <nav>
         <RouterLink to="/">Country List</RouterLink>
         <RouterLink to="/create">Add a Country</RouterLink>
         <RouterLink to="/country">View one Country</RouterLink>
       </nav>
-    <!-- </div> -->
   </header>
 
   <RouterView />
@@ -38,12 +40,6 @@ header {
   background-color: #fff; /* or any color you prefer */
   z-index: 1000; /* Ensures the header stays on top */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-  padding: 1rem 0;
 }
 
 nav {
