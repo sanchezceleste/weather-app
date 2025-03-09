@@ -17,7 +17,7 @@ export default defineComponent({
       <nav>
         <RouterLink to="/">Country List</RouterLink>
         <RouterLink to="/create">Add a Country</RouterLink>
-        <RouterLink to="/country">View one Country</RouterLink>
+        <RouterLink to="/country/:id">View one Country</RouterLink>
       </nav>
   </header>
 
